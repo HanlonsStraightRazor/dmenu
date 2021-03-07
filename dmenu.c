@@ -197,7 +197,7 @@ drawmenu(void)
   if (lines > 0) {
     /* draw vertical list */
     for (item = curr; item != next; item = item->right)
-      x = drawitem(item, x, 0, MIN(TEXTW(item->text), mw - x - TEXTW(">") - TEXTW(numbers)));
+      x = drawitem(item, 0, y += bh, MIN(TEXTW(item->text), mw - x - TEXTW(">") - TEXTW(numbers)));
   } else if (matches) {
     /* draw horizontal list */
     x += inputw;
